@@ -44,12 +44,16 @@ struct PoketMonList: View {
                 ForEach(viewModel.poketMons.results, id: \.name) { poketMon in
                     HStack {
                         if let url = URL(string: poketMon.imageUrl) {
-                            AsyncImage(url: url) { result in
-                                result.image?
-                                    .resizable()
-                                    .scaledToFill()
+                            if #available(iOS 15.0, *) {
+                                AsyncImage(url: url) { result in
+                                    result.image?
+                                        .resizable()
+                                        .scaledToFill()
+                                }
+                                .frame(width: 70, height: 70)
+                            } else {
+                                // Fallback on earlier versions
                             }
-                            .frame(width: 70, height: 70)
                         }
                         
                         Text(poketMon.name)
@@ -58,8 +62,8 @@ struct PoketMonList: View {
                 }
             }
         }
-        .task {
-            await viewModel.fetch()
+        .onAppear {
+            Task { await viewModel.fetch() }
         }
     }
 }

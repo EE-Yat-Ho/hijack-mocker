@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-let blue = UIColor(red: 0, green: 123.0/255.0, blue: 247.0/255.0, alpha: 1).withAlphaComponent(0.5)
 
 public final class HijackMokerWindow: UIWindow {
+    
+    let blue = UIColor(red: 0, green: 123.0/255.0, blue: 247.0/255.0, alpha: 1).withAlphaComponent(0.5)
     
     public override init(frame: CGRect) {
         super.init(frame: frame)

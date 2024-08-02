@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-let gray = Color(white: 0.9)
-
 public struct HijackMokerToggle: View {
+    
+    let gray = Color(white: 0.9)
+    let blue = Color(red: 0, green: 123.0/255.0, blue: 247.0/255.0).opacity(0.5)
     
     public init() {
         self.isOn = isOn
@@ -23,7 +24,7 @@ public struct HijackMokerToggle: View {
             HStack {
                 Spacer()
                 Toggle("", isOn: $isOn)
-                    .toggleStyle(HijackMokerToggleStyle(onColor: Color(uiColor: blue), offColor: gray, thumbColor: Color(uiColor: blue)))
+                    .toggleStyle(HijackMokerToggleStyle(onColor: blue, offColor: gray, thumbColor: blue))
                     .onChange(of: isOn) { value in
                         HijackMoekrIsOn = value
                     }
