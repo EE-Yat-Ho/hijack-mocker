@@ -9,8 +9,6 @@ import Foundation
 
 final class ViewModel: ObservableObject {
     
-    init() {}
-    
     @Published
     var poketMons = PoketMons(results: []) {
         didSet {
@@ -23,8 +21,7 @@ final class ViewModel: ObservableObject {
     @Published
     var limit: String = "10"
     
-    
-    var service = NetworkService()
+    private var service = NetworkService()
     
     func fetch() async {
         do {
