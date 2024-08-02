@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 public final class HijackMokerWindow: UIWindow {
     
     let blue = UIColor(red: 0, green: 123.0/255.0, blue: 247.0/255.0, alpha: 1).withAlphaComponent(0.5)
@@ -18,7 +17,7 @@ public final class HijackMokerWindow: UIWindow {
         drawSwitch()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
