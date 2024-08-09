@@ -1,5 +1,5 @@
 
-# Hi-Jack-Mocker 소개 (API Hijacking &amp; Moking)
+# Hi-Jack-Mocker 소개 (API Hijacking &amp; Mocking)
 - Hi-Jack-Mocker는 URLProtocol를 활용하여 네트워크 요청과 응답을 가로채고 수정하여 UI를 쉽게 검증할 수 있게 해주는 프로젝트입니다.
 - API 네트워크 요청과 응답을 하이재킹하고, 모킹하여 다양한 조건에서 UI를 확인할 수 있는 라이브러리입니다.
 - 비개발자가 엣지 케이스에 대한 UI 테스트를 할 때 겪는 문제를 해결하기 위해 만들어졌습니다. 
